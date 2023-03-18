@@ -12,26 +12,27 @@
     <Form >
         <input type="text" id="peso">Digite seu peso (kg)</input>
         <input type="text" id="altura">Digite sua altura (metro e cm)</input>
-        <button type="button" onclick></input>Conferir</button>
-        <input type="text" id="resultado" disabled ></input>
+        <button type="button" onclick="calculate()"></input>Conferir</button>
+        <input type="text" id="resultado" disabled > </input>
 </div>
 </Form>
 </body>
 
 <script>
-    var peso, altura, resultado
+    var peso, altura, resultado, calculate;
 
     peso = parseFloat(document.getElementById("peso").value);
-    altura = parseFloat(document.getElementById("altura").value);
-
-    if  (peso / (altura * altura) ){ 
-
-        resultado = 
-
+    altura = parseFloat(document.getElementById("altura").value)/100;
+   
+   function calculate (){
+       resultado = peso/ (altura*altura);
+       if ( resultado = 20) {
+           alert('okay')
+       }
+     
+        document.getElementById("resultado").value = resultado;
     }
-       
-    
-
 
 </script>
 </html>
+ 
