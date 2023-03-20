@@ -5,34 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style=" text-align: center;color :rgb(90, 131, 149); font-size: 40px;">Calculadora</h1>
-    <div style="text-align: center;">
-    <Form >
-        <input type="text" id="peso">Digite seu peso (kg)</input>
-        <input type="text" id="altura">Digite sua altura (metro e cm)</input>
-        <button type="button" onclick="calculate()"></input>Conferir</button>
-        <input type="text" id="resultado" disabled > </input>
-</div>
-</Form>
+    <h1 style="color: rgb(90, 131, 149);font-size: 40px;">Calculadora IMC</h1>
+    <div id="principal" style="text-align: center;">
+        <form>
+            <div id="gender" style="text-align: center;">
+                <label for="male">Genêro</label>
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Masculino</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Feminino</label>
+            </div>
+            <div id="weight" style="text-align: center;">
+                <label for="peso">Digite seu peso (kg)</label>
+                <input type="text" id="peso">
+            </div>
+            <div id="height" style="text-align: center;">
+                <label for="altura">Digite sua altura (cm)</label>
+                <input type="text" id="altura">
+            </div>
+            <input id ="buttonn"type="button" value="Calcular" onclick="calcularIMC()">
+            <div id="finalizacao">
+                <textarea name="resultado" id="resultado" cols="40" rows="6" disabled></textarea>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            var resultado = "";
+            var peso = parseFloat(document.getElementById("peso").value);
+            var altura = parseFloat(document.getElementById("altura").value) / 100;
+            var imc = peso / (altura * altura);
+
+            if (imc < 18.5) {
+                resultado = "Seu IMC é " + imc.toFixed(2) + ". Você está abaixo do peso ideal.";
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                resultado = "Seu IMC é " + imc.toFixed(2) + ". Seu peso está normal.";
+            } else if (imc >= 25 && imc <= 29.9) {
+                resultado = "Seu IMC é " + imc.toFixed(2) + ". Você está com sobrepeso.";
+            } else if (imc >= 30 && imc <= 34.9) {
+                resultado = "Seu IMC é " + imc.toFixed(2) + ". Você está com obesidade grau I.";
+            } else if (imc >= 35 && imc <= 39.9) {
+                resultado = "Seu IMC é " + imc.toFixed(2) + ". Você está com obesidade grau II.";
+            } else {
+                resultado = "Seu IMC é " + imc.toFixed(2) + ". Você está com obesidade grau III.";
+            }
+
+            document.getElementById("resultado").value = resultado;
+        }
+    </script>
 </body>
-
-<script>
-    var peso, altura, resultado, calculate;
-
-    peso = parseFloat(document.getElementById("peso").value);
-    altura = parseFloat(document.getElementById("altura").value)/100;
-   
-   function calculate (){
-       resultado = peso/ (altura*altura);
-       if ( resultado = 20) {
-           alert('okay')
-       }
-     
-        document.getElementById("resultado").value = resultado;
-    }
-
-</script>
 </html>
- 
