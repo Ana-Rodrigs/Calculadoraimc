@@ -1,0 +1,75 @@
+
+
+
+Body{
+height: 100%;
+width: 100%;
+
+}
+
+#principal{
+background-color: rgb(223, 152, 126);
+ text-align: center;
+ max-width: 400px;
+ height: 360px;
+ padding: 20px;
+ border-radius: 20px;
+}
+
+#gender{
+font-style: oblique;
+text-align: right;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 20px;
+padding: 10px;
+margin-top: 10px;
+
+}
+#weight{
+font-style: oblique;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 20px;
+padding: 10px;
+margin-top: 10px;
+}
+
+#peso{
+height: 25px;
+border-radius: 5px;
+border-color: whitesmoke;
+}
+
+#height{
+font-style: oblique;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 20px;
+padding: 10px;
+margin-top: 10px;
+}
+#altura{
+height: 25px;
+border-radius: 5px;
+border-color: whitesmoke;
+
+}
+ 
+#buttonn{
+background-color: rgb(169, 207, 194);
+border-radius: 10px ;
+border-color: whitesmoke;
+padding: 10px;
+margin-top: 10px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 15px;
+font-style: oblique;
+font-weight: bold;
+}
+
+#resultado {
+margin-top: 10px;
+font-style: oblique;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 15px;
+font-weight: bold;
+
+}
